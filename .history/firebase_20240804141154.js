@@ -5,6 +5,12 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import "firebase/auth";
 import "firebase/firestore";
+// import { config } from "dotenv";
+// config({ path: ".env.local" });
+
+require("dotenv").config({ path: ".env.local" });
+
+console.log(process.env.FIREBASE_API_KEY);
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -12,13 +18,13 @@ import "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDoeMrOARYRG4KhF3eDAX__qDLRnCzhPvE",
-  authDomain: "signal-mobile-app-f8b1f.firebaseapp.com",
-  projectId: "signal-mobile-app-f8b1f",
-  storageBucket: "signal-mobile-app-f8b1f.appspot.com",
-  messagingSenderId: "613258740775",
-  appId: "1:613258740775:web:9a91a1e2a5270b9a7c7a02",
-  measurementId: "G-WKNY0G2ZMP",
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
+  measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 };
 
 let app;
