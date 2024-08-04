@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "messenger",
-    "slug": "messenger",
+    "name": "Messening",
+    "slug": "messening",
+    "description": "A messaging app built with Expo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -12,14 +13,23 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/18bd5842-9515-4501-b5e4-352273b74a05"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gauravbisht.messening"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.gauravbisht.messening"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +41,18 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "18bd5842-9515-4501-b5e4-352273b74a05"
+      }
+    },
+    "owner": "gauravbisht",
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
